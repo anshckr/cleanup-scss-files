@@ -89,6 +89,14 @@ function removeSCSSFile(filePath) {
   }
 }
 
+/**
+ * { Cleanup all the unused SCSS files at the dirPath }
+ *
+ * @param      {<string>}    dirPath                                The directory where you want to run the cleanup at
+ * @param      {<Regex>}     paramsIgnoreFilesRegex                 Regular expression to match file names to ignore during cleanup
+ * @param      {<Regex>}     paramsIgnoreFoldersRegex               Regular expression to match folder names to ignore during cleanup
+ * @param      {<Array>}     paramsStartPointSCSSs                  Array of starting point scss files to consume during cleanup
+ */
 function cleanupSCSSsAtPath(dirPath, paramsIgnoreFilesRegex, paramsIgnoreFoldersRegex, paramsStartPointSCSSs) {
   ignoreFilesRegex = paramsIgnoreFilesRegex;
   ignoreFoldersRegex = paramsIgnoreFoldersRegex;
@@ -99,6 +107,4 @@ function cleanupSCSSsAtPath(dirPath, paramsIgnoreFilesRegex, paramsIgnoreFolders
   });
 }
 
-module.exports = {
- cleanupSCSSsAtPath: cleanupSCSSsAtPath
-};
+module.exports = cleanupSCSSsAtPath;

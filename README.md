@@ -13,9 +13,7 @@ Note: add --save if you are using npm < 5.0.0
 
 In Node.js:
 ```js
-var {
-  cleanupSCSSsAtPath
-} = require('@anshckr/cleanup-scss-files');
+var cleanupSCSSsAtPath = require('@anshckr/cleanup-scss-files');
 ```
 
 ## API
