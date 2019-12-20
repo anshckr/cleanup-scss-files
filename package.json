@@ -1,0 +1,30 @@
+{
+  "name": "cleanup-scss-files",
+  "version": "1.0.0",
+  "description": "Cleanup unused scss files in a project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sample:debug": "nodemon --inspect-brk example/sample.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anshckr/cleanup-scss-files.git"
+  },
+  "keywords": [
+    "cleanup",
+    "unused",
+    "scss",
+    "detect",
+    "remove"
+  ],
+  "author": "Anshul Nema",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/anshckr/cleanup-scss-files/issues"
+  },
+  "homepage": "https://github.com/anshckr/cleanup-scss-files#readme",
+  "dependencies": {
+    "n-readlines": "^1.0.0"
+  }
+}

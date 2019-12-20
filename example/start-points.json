@@ -1,0 +1,16 @@
+{
+	"stylesheets": [
+		"/Users/Anshul/railsApp/public/stylesheets/app-live/sass/app-live.scss",
+		"/Users/Anshul/railsApp/public/stylesheets/app-live/sass/debugger.scss",
+		"/Users/Anshul/railsApp/public/stylesheets/app-live/sass/live.scss",
+		"/Users/Anshul/railsApp/public/stylesheets/app-live/static/sass/header_elements.scss",
+		"/Users/Anshul/railsApp/public/stylesheets/app-live/static/sass/rf-browser-list.scss",
+		"/Users/Anshul/railsApp/public/stylesheets/app-live/static/sass/static.scss",
+		"/Users/Anshul/railsApp/public/stylesheets/app-live/static/sass/templates/android-plugin.scss",
+		"/Users/Anshul/railsApp/public/stylesheets/app-live/static/sass/templates/app-live-features.scss",
+		"/Users/Anshul/railsApp/public/stylesheets/app-live/static/sass/templates/app-live-landing.scss",
+		"/Users/Anshul/railsApp/public/stylesheets/app-live/static/sass/templates/app-live-landing.scss",
+		"/Users/Anshul/railsApp/public/stylesheets/app-live/static/sass/templates/features.scss",
+		"/Users/Anshul/railsApp/public/stylesheets/app-live/static/sass/templates/mobile-features.scss"
+	]
+}
