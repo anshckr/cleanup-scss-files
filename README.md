@@ -30,7 +30,7 @@ This package exposes the following utilities ->
  * @param      {<string>}    dirPath                                The directory where you want to run the cleanup at
  * @param      {<Regex>}     paramsIgnoreFilesRegex                 Regular expression to match file names to ignore during cleanup
  * @param      {<Regex>}     paramsIgnoreFoldersRegex               Regular expression to match folder names to ignore during cleanup
- * @param      {<Array>}     [paramsStartPointsSCSS=[]]      Array of starting point scss files to consume during cleanup
+ * @param      {<Array>}     paramsStartPointSCSSs                  Array of starting point scss files to consume during cleanup
  */
 
 ```

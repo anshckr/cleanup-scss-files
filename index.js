@@ -11,7 +11,7 @@ var ignoreFilesRegex, ignoreFoldersRegex;
 
 var allUsedSCSSFiles = [];
 
-var startPointsSCSS = [];
+var startPointSCSSs = [];
 
 function recursiveFilesMarker(filePath) {
   var liner = new lineByLine(filePath);
@@ -58,7 +58,7 @@ function recursiveDirFilesIterator(dirPath, cb) {
 }
 
 function fileMarkerStarter(filePath) {
-  if (startPointsSCSS.indexOf(filePath) !== -1) {
+  if (startPointSCSSs.indexOf(filePath) !== -1) {
     allUsedSCSSFiles.push(filePath);
 
     recursiveFilesMarker(filePath);
@@ -89,10 +89,10 @@ function removeSCSSFile(filePath) {
   }
 }
 
-function cleanupSCSSsAtPath(dirPath, paramsIgnoreFilesRegex, paramsIgnoreFoldersRegex, paramsStartPointsSCSS) {
+function cleanupSCSSsAtPath(dirPath, paramsIgnoreFilesRegex, paramsIgnoreFoldersRegex, paramsStartPointSCSSs) {
   ignoreFilesRegex = paramsIgnoreFilesRegex;
   ignoreFoldersRegex = paramsIgnoreFoldersRegex;
-  startPointsSCSS = startPointsSCSS.concat(paramsStartPointsSCSS);
+  startPointSCSSs = startPointSCSSs.concat(paramsStartPointSCSSs);
 
   captureAllUsedSCSSFiles(dirPath).then(function() {
     recursiveDirFilesIterator(dirPath, removeSCSSFile);
