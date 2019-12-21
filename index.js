@@ -98,13 +98,33 @@ function removeSCSSFile(filePath) {
  * @param      {<Array>}     paramsStartPointSCSSs                  Array of starting point scss files to consume during cleanup
  */
 function cleanupSCSSsAtPath(dirPath, paramsIgnoreFilesRegex, paramsIgnoreFoldersRegex, paramsStartPointSCSSs) {
-  ignoreFilesRegex = paramsIgnoreFilesRegex;
-  ignoreFoldersRegex = paramsIgnoreFoldersRegex;
-  startPointSCSSs = startPointSCSSs.concat(paramsStartPointSCSSs);
+  try {
+    if (dirPath.constructor !== String) {
+      throw new Error('dirPath should be a String');
+    }
 
-  captureAllUsedSCSSFiles(dirPath).then(function() {
-    recursiveDirFilesIterator(dirPath, removeSCSSFile);
-  });
+    if (paramsIgnoreFilesRegex.constructor !== RegExp) {
+      throw new Error('paramsIgnoreFilesRegex should be a RegExp');
+    }
+
+    if (paramsIgnoreFoldersRegex.constructor !== RegExp) {
+      throw new Error('paramsIgnoreFoldersRegex should be a RegExp');
+    }
+
+    if (paramsStartPointSCSSs.constructor !== Array) {
+      throw new Error('paramsStartPointSCSSs should be an Array');
+    }
+
+    ignoreFilesRegex = paramsIgnoreFilesRegex;
+    ignoreFoldersRegex = paramsIgnoreFoldersRegex;
+    startPointSCSSs = startPointSCSSs.concat(paramsStartPointSCSSs);
+
+    captureAllUsedSCSSFiles(dirPath).then(function() {
+      recursiveDirFilesIterator(dirPath, removeSCSSFile);
+    });
+  } catch(err) {
+    console.log(err);
+  }
 }
 
 module.exports = cleanupSCSSsAtPath;
