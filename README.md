@@ -33,7 +33,17 @@ This package exposes the following utilities ->
 
 ```
 
-## Usage [refer the example folder]
+## Usage
+
+Refer the [example folder](https://github.com/anshckr/cleanup-scss-files/tree/master/example)
+
+## 🤝 Contributing
+
+Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/anshckr/cleanup-scss-files/issues). You can also take a look at the [contributing guide](https://github.com/anshckr/cleanup-scss-files/blob/master/CONTRIBUTING.md).
+
+## Show your support
+
+Give a ⭐️ if this project helped you!
 
 ## License
 
