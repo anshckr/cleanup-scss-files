@@ -93,11 +93,11 @@ function removeSCSSFile(filePath) {
  * { Cleanup all the unused SCSS files at the dirPath }
  *
  * @param      {<string>}    dirPath                                The directory where you want to run the cleanup at
- * @param      {<Regex>}     paramsIgnoreFilesRegex                 Regular expression to match file names to ignore during cleanup
- * @param      {<Regex>}     paramsIgnoreFoldersRegex               Regular expression to match folder names to ignore during cleanup
  * @param      {<Array>}     paramsStartPointSCSSs                  Array of starting point scss files to consume during cleanup
+ * @param      {<Regex>}     [paramsIgnoreFilesRegex=/$^/]          Regular expression to match file names to ignore during cleanup
+ * @param      {<Regex>}     [paramsIgnoreFoldersRegex=/$^/]        Regular expression to match folder names to ignore during cleanup
  */
-function cleanupSCSSsAtPath(dirPath, paramsIgnoreFilesRegex, paramsIgnoreFoldersRegex, paramsStartPointSCSSs) {
+function cleanupSCSSsAtPath(dirPath, paramsStartPointSCSSs, paramsIgnoreFilesRegex = /$^/, paramsIgnoreFoldersRegex = /$^/) {
   try {
     if (dirPath.constructor !== String) {
       throw new Error('dirPath should be a String');
@@ -113,6 +113,10 @@ function cleanupSCSSsAtPath(dirPath, paramsIgnoreFilesRegex, paramsIgnoreFolders
 
     if (paramsStartPointSCSSs.constructor !== Array) {
       throw new Error('paramsStartPointSCSSs should be an Array');
+    }
+
+    if (!paramsStartPointSCSSs.length) {
+      throw new Error('paramsStartPointSCSSs can\'t be empty Array');
     }
 
     ignoreFilesRegex = paramsIgnoreFilesRegex;

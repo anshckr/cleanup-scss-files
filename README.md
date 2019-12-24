@@ -15,6 +15,19 @@ In Node.js:
 ```js
 var cleanupSCSSsAtPath = require('@anshckr/cleanup-scss-files');
 ```
+## Pre-requesite
+
+For this utility to work, all the import statements should be in valid format (Please sanitize your scss import statements for this util to work)->
+
+```
+// for importing partials, remove '_' prefix and '.scss' suffix from import statements
+
+@import "variables"; // valid
+
+@import "_variables.scss"; // invalid
+@import "_variables"; // invalid
+@import "variables.scss"; // invalid
+```
 
 ## API
 
@@ -26,11 +39,10 @@ This package exposes the following utilities ->
  * { Cleanup all the unused SCSS files at the dirPath }
  *
  * @param      {<string>}    dirPath                                The directory where you want to run the cleanup at
- * @param      {<Regex>}     paramsIgnoreFilesRegex                 Regular expression to match file names to ignore during cleanup
- * @param      {<Regex>}     paramsIgnoreFoldersRegex               Regular expression to match folder names to ignore during cleanup
  * @param      {<Array>}     paramsStartPointSCSSs                  Array of starting point scss files to consume during cleanup
+ * @param      {<Regex>}     [paramsIgnoreFilesRegex=/$^/]          Regular expression to match file names to ignore during cleanup
+ * @param      {<Regex>}     [paramsIgnoreFoldersRegex=/$^/]        Regular expression to match folder names to ignore during cleanup
  */
-
 ```
 
 ## Usage
