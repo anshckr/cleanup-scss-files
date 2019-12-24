@@ -1,6 +1,6 @@
 {
   "name": "@anshckr/cleanup-scss-files",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Cleanup unused scss files in a project",
   "main": "index.js",
   "scripts": {
