@@ -31,19 +31,14 @@ For this utility to work, all the import statements should be in valid format (P
 
 ## API
 
-```
-This package exposes the following utilities ->
+### 1. `cleanupSCSSsAtPath` (Deletes all the unused SCSS files in the directory)
 
-1) cleanupSCSSsAtPath
-/**
- * { Cleanup all the unused SCSS files at the dirPath }
- *
- * @param      {<string>}    dirPath                                The directory where you want to run the cleanup at
- * @param      {<Array>}     paramsStartPointSCSSs                  Array of starting point scss files to consume during cleanup
- * @param      {<Regex>}     [paramsIgnoreFilesRegex=/$^/]          Regular expression to match file names to ignore during cleanup
- * @param      {<Regex>}     [paramsIgnoreFoldersRegex=/$^/]        Regular expression to match folder names to ignore during cleanup
- */
-```
+| Parameter | Type | Description |
+| :--- | :--- | :--- |
+| `dirPath`  | `String`  | **Required**. The directory where you want to run the cleanup at  |
+| `paramsStartPointSCSSs` | `Array` | **Required**. Array of starting point scss files to consume during cleanup |
+| `paramsIgnoreFilesRegex` | `Regex` | **Optional**. Regular expression to match file names to ignore during cleanup. **Default:** /$^/ |
+| `paramsIgnoreFoldersRegex` | `Regex` | **Optional**. Regular expression to match folder names to ignore during cleanup. **Default:** /$^/ |
 
 ## Usage
 
